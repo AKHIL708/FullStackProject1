@@ -21,9 +21,9 @@ export default function ItemsListdata() {
     "december",
   ];
 
-  const GetFullList = ()=>{
-    navigate("/addList")
-  }
+  const GetFullList = () => {
+    navigate("/addList");
+  };
 
   const AddListToDataBase = async (e) => {
     e.preventDefault();
@@ -79,7 +79,7 @@ export default function ItemsListdata() {
           {Months[date.getMonth()]} {date.getDate()} {date.getFullYear()}
         </p>
       </div>
-
+<div className="AddingList">
       <input
         value={list}
         name="list"
@@ -87,11 +87,14 @@ export default function ItemsListdata() {
         onChange={(e) => setList(e.target.value)}
       />
       <button onClick={AddListToDataBase}>Add</button>
-     <a href="http://localhost:5000/addList" target={"_blank"}><button onClick={GetFullList}>GetFullList</button></a> 
+      <a href="http://localhost:5000/addList" target={"_blank"}>
+        <button onClick={GetFullList}>GetFullList</button>
+      </a>
+      </div>
 
-      <table style={{ borderCollapse: "collapse" }}>
+      <table className="Table" style={{ borderCollapse: "collapse" }}>
         <tr>
-          <th style={{ border: "1px solid black" }}>Grocery Lists</th>
+          <th >Grocery Lists</th>
         </tr>
         <tbody>
           {Data &&
@@ -101,19 +104,13 @@ export default function ItemsListdata() {
                   <td
                     style={{
                       border: "1px solid black",
+                      padding: "5px"
                     }}
                     key={item.id}
                   >
                     {item.List}
                   </td>
-                  <td
-                    className="TableData"
-                    style={{
-                      border: "1px solid black",
-                    }}
-                  >
-                    <button onClick={() => getItemId(item._id)}>view</button>
-                    <button onClick={() => getItemId(item._id)}>edit</button>
+                  <td className="TableData">
                     <button onClick={() => getItemId(item._id)}>Delete</button>
                   </td>
                 </tr>

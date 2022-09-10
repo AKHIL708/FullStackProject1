@@ -12,7 +12,7 @@
   background-color: rgb(77, 176, 223);
   color: white;
 }
-.ShowDate{
+.ShowDate {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -22,9 +22,35 @@
   text-decoration: underline;
   font-weight: bolder;
 }
-.TableData button{
+.TableData button {
   margin: 5px;
   cursor: pointer;
   padding: 2px;
+  background-color: red;
+  border: none;
+  color: white;
 }
+.Table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.AddingList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+}
+.AddingList button{
+  background-color: rgb(47, 199, 47);
+  border: none;
+  margin: 5px;
+  padding: 4px;
+  border-radius: 5px;
+  color: white;
 
+  
+}
