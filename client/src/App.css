@@ -22,4 +22,9 @@
   text-decoration: underline;
   font-weight: bolder;
 }
+.TableData button{
+  margin: 5px;
+  cursor: pointer;
+  padding: 2px;
+}
 
